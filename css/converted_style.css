@@ -1,0 +1,1086 @@
+/*
+* Resume template
+* Created by : Ahmed Essa
+* website : www.ahmedessa.net
+*/
+/* 프리텐다드 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+
+
+
+/* Google fonts & font family
+==================================================*/
+
+@import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i';
+
+/*
+font-family: 'Playfair Display', serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+
+/* typography
+==================================================*/
+
+
+
+
+
+
+
+/* General
+==================================================*/
+
+body {
+    font-family: 'Pretendard';
+
+    line-height: 24px;
+
+}
+
+
+
+
+/* preloader
+==================================================*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 10000
+}
+
+#status,
+.preloader {
+    top: 50%;
+    left: 50%;
+    position: absolute
+}
+
+#status {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -50px 0 0 -50px
+}
+
+.preloader {
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    margin-left: -20px
+}
+
+.preloader:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    height: 100%;
+    width: 100%;
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
+    border: 2px solid #425BB5;
+    border-top: 2px solid transparent;
+    border-radius: 100%
+}
+
+.preloader>.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 25px;
+    width: 10.6px;
+    margin-top: -12.5px;
+    margin-left: -5.3px;
+    -webkit-animation: wink 1s ease-in-out infinite alternate;
+    animation: wink 1s ease-in-out infinite alternate
+}
+
+@media only screen and (min-width:768px) {
+    .preloader {
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+        margin-left: -30px
+    }
+
+    .preloader:before {
+        left: -2px;
+        top: -2px;
+        border-width: 2px
+    }
+
+    .preloader>.icon {
+        height: 37.5px;
+        width: 15.9px;
+        margin-top: -18.75px;
+        margin-left: -7.95px
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .preloader {
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+        margin-left: -30px
+    }
+
+    .preloader>.icon {
+        height: 50px;
+        width: 21.2px;
+        margin-top: -25px;
+        margin-left: -10.6px
+    }
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@-webkit-keyframes wink {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes wink {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+/* Header
+==================================================*/
+
+header {
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    height: 65px;
+}
+
+nav ul {
+    display: inline-block;
+    padding-left: 0;
+    list-style: none;
+    padding: 20px;
+    margin-bottom: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav li a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #444;
+    font-size: 0.688em;
+    font-weight: bold;
+}
+
+.bg-nav {
+    background: #fff;
+    border-bottom: 1px solid #f3f3f3
+}
+
+.bg-nav ul {
+    padding: 10px;
+}
+
+a:focus {
+    color: #444;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #425BB5;
+    text-decoration: none;
+}
+
+a.active {
+    color: #425BB5;
+}
+
+
+/* home section
+==================================================*/
+
+
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.disply-table {
+    display: table;
+    height: 100vh;
+}
+
+.section video {
+    width: 100%;
+    display: block;
+}
+
+.video1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.video2 {
+    opacity: 0;
+}
+
+.section .moblie-video {
+    display: none;
+}
+
+
+/* about section
+==================================================*/
+
+
+
+#about h1 {
+    text-align: center;
+    font-family: 'Noto Sans';
+    font-weight: 900;
+    font-size: 3.125em;
+    padding-top: 100px;
+}
+
+#about h3 {
+    font-family: 'pretendard';
+    font-weight: 300;
+    font-size: 1.250em;
+    text-align: center;
+    padding-bottom: 70px;
+    line-height: 1.5;
+
+}
+
+
+
+#about {
+    background-color: #fff;
+
+}
+
+.box1 img{
+    width: 100%;
+    padding-top: 18px;
+}
+
+.box0 {
+    padding-bottom: 100px;
+
+}
+
+.box2 h2 {
+    font-weight: bold;
+    font-size: 2.500em;
+    padding-bottom: 30px;
+
+}
+
+.box2 p {
+    font-size: 1.225em;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 14px 0;
+}
+
+#about {
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.about-img-div img {
+    margin: auto;
+}
+
+
+
+/* projects section
+==================================================*/
+
+
+
+
+
+
+#portfolio {
+    background-color: #4a5943;
+    padding-bottom: 100px;
+}
+
+#portfolio img {
+    width: 100%;
+
+}
+
+#portfolio h1 {
+    color: #fff;
+    text-align: center;
+    font-family: 'Noto Sans';
+    font-weight: 900;
+    font-size: 3.125em;
+    padding-bottom: 10px;
+padding-top: 100px;
+
+}
+
+#portfolio h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.250em;
+    text-align: center;
+    line-height: 1.5;
+padding-bottom: 70px;
+}
+
+
+.portfoliobox h4 {
+
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 600;
+}
+
+.portfoliobox p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+/* 포트폴리오 이미지 애니메이션 */
+
+
+
+.portfoliobox .hover-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.portfoliobox .hover-wrapper img {
+    transition: transform 0.5s ease;
+    display: block;
+
+}
+
+.portfoliobox .hover-wrapper:hover img {
+    transform: scale(1.3);
+}
+
+.imghidden {
+    overflow: hidden;
+}
+
+.portfoliobox .hover-wrapper:hover h4,
+.portfoliobox .hover-wrapper:hover p {
+    color: #ff9600;
+}
+
+/* .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: 0.8s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.shuffle-item:hover .hover-overlay {
+    height: 100%;
+}
+
+
+
+@media (max-width:1199px) {
+    .hover-overlay {
+        height: 25%;
+    }
+}
+
+@media (max-width:767px) {
+    .hover-overlay {
+        height: 30%;
+    }
+
+   
+
+    .btn-sm {
+        font-size: 0.750em;
+        padding: 1em 1.5em;
+    }
+}
+
+@media (max-width:575px) {
+    .hover-overlay {
+        height: 20%;
+    }
+} */
+
+
+/* artwork section
+==================================================*/
+#artwork {
+    padding-bottom: 100px;
+    background-color: #fff;
+}
+
+#artwork h1 {
+    text-align: center;
+    font-family: 'Noto Sans';
+    font-weight: 900;
+    font-size: 3.125em;
+    padding-top: 100px;
+
+}
+
+#artwork h3 {
+
+    font-weight: 300;
+    font-size: 1.250em;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+
+
+
+#artwork h4 {
+    font-size: 1.5em;
+    padding-top: 10px;
+    font-weight: 600;
+}
+
+#artwork p {
+    font-size: 1.4em;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+
+.artwork_in img {
+    width: 100%;
+}
+
+.artwork_in a {
+    color: #333;
+}
+
+.artwork_in a:hover {
+    color: #ff6600;
+}
+
+
+/* 아트워크 이미지 애니메이션 */
+.artwork_in img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.artwork_in img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* popup section
+==================================================*/
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    display: none;
+}
+
+.popup i {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 3.125em;
+    color: #fff;
+}
+
+.popup_in {
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    max-width: 600px;
+}
+
+.popup_in>img,
+.popup_in .artwork_slide {
+    width: 100%;
+}
+
+.artwork_slide {
+    overflow: hidden;
+    position: relative;
+}
+
+.artwork_slide img {
+    width: 100%;
+}
+
+.artwork_slide .swiper-pagination-bullet {
+    background-color: #fff;
+}
+
+.popup_in ul {
+    margin: 0;
+    padding: 30px;
+    width: 40%;
+    box-sizing: border-box;
+    background-color: #fff;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popup h5 {
+    font-size: 1.250em;
+    padding-bottom: 10px;
+}
+
+.popup p {
+    margin-bottom: 0;
+}
+
+.popup i {
+    cursor: pointer;
+}
+
+/* experience section
+==================================================*/
+
+#experience {
+    background-color: #fff;
+}
+
+#experience h1 {
+    text-align: center;
+    font-family: 'Noto Sans';
+    font-weight: 900;
+    font-size: 3.125em;
+    padding-top: 100px;
+
+
+}
+
+#experience h2 {
+
+    font-family: 'pretendard';
+    font-weight: 300;
+    font-size: 1.250em;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+#experience p {
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #ff6600;
+}
+
+#experience span {
+    font-size: 1.13em;
+    font-weight: 300;
+}
+
+#experience h3 {
+    font-size: 1.69em;
+
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+
+.experience-row {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.experience-row h3 {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #425BB5;
+    font-size: 1.000em;
+    font-weight: bold;
+
+}
+
+.experience-row p {
+    color: #888;
+    margin-top: 20px;
+    font-size: 0.938em;
+}
+
+.experience-row .date {
+    color: #000;
+    font-size: 1.062em;
+}
+
+.timeline {
+    padding-left: 0;
+    list-style: none;
+    position: relative;
+}
+
+.timeline:before {
+    background-color: #c5c5c5;
+    content: '';
+    margin-left: -1px;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 2px;
+    height: 100%;
+}
+
+.timeline-event {
+    position: relative;
+}
+
+.timeline-event:hover .timeline-event-icon {
+    transform: rotate(-45deg) scale(1.1);
+
+}
+
+/* .timeline-event:hover .timeline-event-thumbnail {
+    box-shadow: inset 40em 0 0 0 #ff6600;
+} */
+
+.timeline-event-copy {
+    padding: 2em;
+    position: relative;
+    top: -1.875em;
+    left: 4em;
+    width: calc(100% - 4em);
+}
+
+.timeline-event-copy h3 {
+    font-size: 1.75em;
+}
+
+.timeline-event-copy h4 {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.timeline-event-copy strong {
+    font-weight: 700;
+}
+
+.timeline-event-copy p:not(.timeline-event-thumbnail) {
+    padding-bottom: 1.2em;
+}
+
+.timeline-event-icon {
+    width: 4em;
+    height: 4em;
+    background: url(../img/headphone.png) no-repeat center center #fff;
+    background-size: contain;
+    border: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(3em - 3em);
+    /* 중앙 정렬 */
+    transform: rotate(45deg);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform-origin: center;
+}
+
+
+.timeline-event-thumbnail {
+    background: none;
+    box-shadow: none;
+    color: inherit;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    transition: box-shadow 0.5s ease-in 0.1s;
+}
+
+
+
+
+
+/* 익스피리언스 섹션 호버 애니메이션 - 레이아웃 수정 */
+.timeline-event h3,
+.timeline-event p,
+.timeline-event span {
+    position: relative;
+
+    padding-bottom: 3px;
+}
+
+.timeline-event h3::after,
+
+.timeline-event span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.2em;
+    width: 100%;
+    height: 13px;
+    background-color: #ffeb3b;
+    opacity: 0.6;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.7s ease-in-out;
+    z-index: -1;
+}
+
+.timeline-event:hover h3::after,
+.timeline-event:hover p::after,
+.timeline-event:hover span::after {
+    transform: scaleX(1);
+}
+
+
+.timeline-event-copy {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* skill section
+==================================================*/
+
+#skill {
+    background-color: #fff;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+#skill h3 {
+
+    font-family: 'pretendard';
+    font-weight: 300;
+    font-size: 1.250em;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+#skill h1 {
+    text-align: center;
+    font-family: 'Noto Sans';
+    font-weight: 900;
+    font-size: 3.125em;
+    padding-top: 100px;
+
+}
+
+.progress-wrapper {
+    height: 130px;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.wave::before,
+.wave::after {
+    content: "";
+    position: absolute;
+    width: 1800px;
+    height: 1800px;
+    bottom: 0;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 45%;
+    -webkit-transform: translateX(-50%) rotate(0);
+    transform: translateX(-50%) rotate(0);
+    -webkit-animation: rotate 6s linear infinite;
+    animation: rotate 6s linear infinite;
+    z-index: 10;
+}
+
+.wave::after {
+    border-radius: 47%;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-transform: translateX(-50%) rotate(0);
+    transform: translateX(-50%) rotate(0);
+    -webkit-animation: rotate 10s linear -5s infinite;
+    animation: rotate 10s linear -5s infinite;
+    z-index: 20;
+}
+
+@-webkit-keyframes rotate {
+    50% {
+        -webkit-transform: translateX(-50%) rotate(180deg);
+        transform: translateX(-50%) rotate(180deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(-50%) rotate(360deg);
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    50% {
+        -webkit-transform: translateX(-50%) rotate(180deg);
+        transform: translateX(-50%) rotate(180deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(-50%) rotate(360deg);
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.rounded-top {
+    border-top-left-radius: .25rem !important;
+}
+
+
+
+
+/* contact
+==================================================*/
+
+#contact {
+    background: #4a5943;
+    padding: 100px 0;
+
+}
+
+#contact h1 {
+    font-family: 'Noto Sans';
+    text-align: center;
+    font-weight: 900;
+    font-size: 3.125em;
+    padding-bottom: 70px;
+    color: #fff;
+}
+
+#contact h3 {
+color: #fff;
+    font-weight: 500;
+    font-size: 1.35em;
+    text-align: center;
+
+}
+
+#contact p {
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 300;
+
+}
+
+
+.contact_in {
+    text-align: center;
+}
+
+.contact_in i {
+    font-size: 2.188em;
+}
+
+#contact img {
+    width: 2.50em;
+}
+
+
+/* Contact 아이콘 애니메이션 */
+.contact_in img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact_in img:hover {
+    transform:  rotate(10deg);
+}
+
+/* 부드러운 흔들림 효과 */
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.contact_in img:hover {
+    animation: shake 0.6s ease-in-out;
+}
+
+
+/* Responsive media queries
+==================================================*/
+@media (max-width: 1200px) {
+    .skill_in {
+        gap: 20px 0;
+    }
+
+    .skill_in>div {
+        width: 49%;
+    }
+
+    .box2 br{
+        display: none;
+    }
+
+    .box1 img{
+        padding-top: 90px;
+    }
+}
+@media (max-width: 991px) {
+    .box1 img{
+        padding-top: 0px;
+
+        padding-bottom: 30px;
+    }
+
+    .box0 {
+        padding-bottom: 0;
+    }
+
+}
+@media (max-width: 768px) {
+    .section .moblie-video {
+        display: block;
+    }
+
+    .section .video1,
+    .section .video2 {
+        display: none;
+    }
+
+    .popup_in {
+        display: block;
+    }
+
+    .popup_in>img,
+    .popup_in .artwork_slide,
+    .popup ul {
+        width: 100%;
+    }
+
+    .popup ul li:nth-child(1) {
+        padding-bottom: 10px;
+    }
+
+    .skill_in {
+        gap: 10px 0;
+    }
+
+    .skill_in>div {
+        width: 100%;
+    }
+
+    .timeline-event-copy {
+        width: 90%;
+        left: 2em;
+    }
+}
+
+@media (max-width: 500px) {
+    nav ul {
+        display: none;
+    }
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.125em;
+        line-height: 50px;
+    }
+
+    .about-border {
+        width: calc(90% - 50px);
+    }
+}
+
+@media (max-width: 420px) {
+    nav li {
+        margin: 6px;
+    }
+
+    nav li a {
+        font-size: 0.625em;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .popup ul {
+        padding: 20px;
+    }
+}
