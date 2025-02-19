@@ -20,14 +20,14 @@ body {
 	border-radius: 10px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 	background: #fff;
-	border: 2px solid #44584c;
-	color: #44584c;
+	border: 2px solid #131313;
+	color: #131313;
 	font-weight: bold;
 	text-decoration: none;
 }
 
 .btn_1:hover{
-	background-color: #44584c;
+	background-color: #ff6600;
 	color: #fff;
 }
 
